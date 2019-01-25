@@ -1,0 +1,35 @@
+﻿@model MVAPI.Application.ViewModels.ResultViewModel
+@{
+    ViewData["Title"] = "BuscaPersonagem";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Slide 3 (#60) -->
+<section class="slide fade-6 kenBurns" data-name="RandomCharacter">
+    <div class="content">
+        <div class="container">
+            <div class="wrap">
+
+                <div class="fix-12-12">
+                    <ul class="grid">
+                        <li class="col-6-12 left">
+                            <h1 class="ae-2 fromLeft">@Model.name</h1>
+                            <p class="ae-3 fromLeft"><span class="opacity-8">@Model.description</span></p>
+                            <ul class="tabs controller uppercase bold ae-4 fromCenter" data-slider-id="60-1">
+                                <li class="selected">Quadrinhos</li>
+                                    <li>@Model.name</li>
+                            </ul>
+                        </li>
+                        <li class="col-6-12 left ae-5 fromCenter">
+                            <ul class="slider animated margin-top-4" data-slider-id="60-1">
+                                <img class="card-img-top" src="@Model.resourceURI" />
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="background" style="background-image:url(/images/Assets/img/background/img-60.jpg)"></div>
+</section>

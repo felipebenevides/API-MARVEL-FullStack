@@ -1,0 +1,63 @@
+﻿@model MVAPI.Application.ViewModels.ResultViewModel
+@{
+    ViewData["Title"] = "BuscaPersonagem";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!-- Slide 2 (#60) -->
+<section class="slide fade-6 kenBurns" data-name="RandomCharacter">
+    <div class="content">
+        <div class="container">
+            <div class="wrap">
+
+                <div class="fix-12-12">
+                    <ul class="grid">
+                        <li class="col-6-12 left">
+                            <h1 class="ae-2 fromLeft">@Model.name</h1>
+                            <p class="ae-3 fromLeft"><span class="opacity-8">@Model.description</span></p>
+                            <ul class="tabs controller uppercase bold ae-4 fromCenter" data-slider-id="60-1">
+                                <li class="selected" >Quadrinhos</li>
+                                @foreach (var item in Model.comics.items)
+                                {
+                                    <li>@item.name</li>
+                                }
+                            </ul>
+                        </li>
+                        <li class="col-6-12 left ae-5 fromCenter">
+                            <ul class="slider animated margin-top-4" data-slider-id="60-1">
+                                <img class="card-img-top" src="@Model.resourceURI" />
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="background" style="background-image:url(/images/Assets/img/background/img-60.jpg)"></div>
+</section>
+
+
+
+@*<div class="card text-center">
+        <div class="card-header">
+
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">@Model.name</h4>
+            <img class="card-img-top" src="@Model.resourceURI" height="400" width="400">
+            <p class="card-text">@Model.description</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+        <ul class="list-group list-group-flush">
+            @foreach (var lista in @Model.comics.items)
+            {
+                <li class="list-group-item left">@lista.name</li>
+            }
+        </ul>
+    </div>*@
+
+
+
+

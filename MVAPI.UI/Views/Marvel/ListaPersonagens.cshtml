@@ -1,0 +1,26 @@
+﻿@model MVAPI.Application.ViewModels.DataViewModel
+@{
+    ViewData["Title"] = "ListaPersonagens";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/css/site.css" rel="stylesheet" />
+
+<!-- Slide 3 (#27) -->
+<div class="container">
+    @foreach (var personagens in Model.results)
+    {
+        @if (personagens.thumbnail.path != "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available")
+        {
+            <div class="gallery">
+                <a target="_blank" href="@String.Concat("../Marvel/BuscaPersonagemID?id=",personagens.id)">
+                    <img src="@String.Concat(@personagens.thumbnail.path,".",@personagens.thumbnail.extension)" width="400" height="400">
+                </a>
+                <div class="desc">@personagens.name</div>
+            </div>
+        }
+    }
+
+    <div class="background" style="background-image:url(/images/Assets/img/background/img-27.jpg)"></div>
+</div>
+

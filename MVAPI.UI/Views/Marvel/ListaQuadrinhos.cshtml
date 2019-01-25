@@ -1,0 +1,28 @@
+﻿@model MVAPI.Application.ViewModels.DataViewModel
+@{
+    ViewData["Title"] = "ListaPersonagens";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="slide fade-6 kenBurns">
+    <div class="content">
+        <div class="container">
+            <div class="wrap">
+                @foreach (var personagens in Model.results)
+                {
+                    @if (personagens.thumbnail.path != "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available")
+                    {
+                        <div class="gallery">
+                            <a target="_blank" href="@String.Concat("../Marvel/BuscaQuadrinhos?id=",personagens.id)">
+                                <img src="@String.Concat(@personagens.thumbnail.path,".",@personagens.thumbnail.extension)" width="500" height="500">
+                            </a>
+                            <div class="desc"><strong>@personagens.title</strong></div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+    <link href="~/css/site.css" rel="stylesheet" />
+    <div class="background" style="background-image:url(/images/Assets/img/background/img-26.jpg)"></div>
+</section>

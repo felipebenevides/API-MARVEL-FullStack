@@ -1,0 +1,58 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\slides.css" />
+    <None Include="wwwroot\css\slides.min.css" />
+    <None Include="wwwroot\images\Assets\img\appstore.jpg" />
+    <None Include="wwwroot\images\Assets\img\background\img-26.jpg" />
+    <None Include="wwwroot\images\Assets\img\background\img-26Old.jpg" />
+    <None Include="wwwroot\images\Assets\img\background\img-27.jpg" />
+    <None Include="wwwroot\images\Assets\img\background\img-34.jpg" />
+    <None Include="wwwroot\images\Assets\img\background\img-34OLD.jpg" />
+    <None Include="wwwroot\images\Assets\img\background\img-60.jpg" />
+    <None Include="wwwroot\images\Assets\img\background\img-60old.jpg" />
+    <None Include="wwwroot\images\Assets\img\background\img-83.jpg" />
+    <None Include="wwwroot\images\Assets\img\background\img-91.jpg" />
+    <None Include="wwwroot\images\Assets\img\background\img-95.jpg" />
+    <None Include="wwwroot\images\Assets\img\gallery-60-1.jpg" />
+    <None Include="wwwroot\images\Assets\img\gallery-60-1OLD.jpg" />
+    <None Include="wwwroot\images\Assets\img\gallery-60-2.jpg" />
+    <None Include="wwwroot\images\Assets\img\gallery-60-3.jpg" />
+    <None Include="wwwroot\images\Assets\img\googleplay.jpg" />
+    <None Include="wwwroot\images\Assets\img\icon-1.png" />
+    <None Include="wwwroot\images\Assets\img\icon-2.png" />
+    <None Include="wwwroot\images\Assets\img\iphones-34.jpg" />
+    <None Include="wwwroot\images\Assets\img\iphones-34old.png" />
+    <None Include="wwwroot\images\Assets\img\watch-26-1.png" />
+    <None Include="wwwroot\images\Assets\img\watch-26-2.png" />
+    <None Include="wwwroot\images\Assets\svg\icons.svg" />
+    <None Include="wwwroot\images\Assets\svg\video-icon-dark.svg" />
+    <None Include="wwwroot\images\Assets\svg\video-icon.svg" />
+    <None Include="wwwroot\js\jquery.min.js" />
+    <None Include="wwwroot\js\plugins.js" />
+    <None Include="wwwroot\js\slides.js" />
+    <None Include="wwwroot\js\slides.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MVAPI.Application\MVAPI.Application.csproj" />
+    <ProjectReference Include="..\MVAPI\MVAPI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Contents\css\" />
+    <Folder Include="Scripts\js\" />
+  </ItemGroup>
+
+</Project>

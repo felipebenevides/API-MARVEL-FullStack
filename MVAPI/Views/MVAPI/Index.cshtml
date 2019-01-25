@@ -1,0 +1,25 @@
+﻿@model MVAPI.Models.Result
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div style="overflow: hidden; margin-top: 50px;">
+    <div style="float: left; margin-right:50px;">
+        <img value="@Model.id" src="@Model.resourceURI" height="400" width="400" />
+    </div>
+    <div style="margin-left: 50px;">
+        <h2><a href="@Model.UrlWiki">@Model.name</a></h2>
+        <p>@Model.description</p>
+    </div>
+
+    <div class="row">
+        @foreach (var item in @Model.comics.items)
+        {
+            <div class="card" style="width: 18rem;">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">@item.name</li>
+                </ul>
+            </div>
+        }
+    </div>
+</div>
